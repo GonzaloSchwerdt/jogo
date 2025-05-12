@@ -1,6 +1,6 @@
 const pizzas = [
   "Muzzarella", "Napolitana", "Fugazzeta", "Calabresa",
-  "Cuatro Quesos", "Roquefort", "Rúcula", "Jamón y Morrones"
+  "CuatroQuesos", "Roquefort", "Rucula", "JamonMorrones"
 ];
 
 let currentRound = [];
@@ -32,13 +32,15 @@ function showMatchup() {
   const pizza2 = currentRound[roundIndex + 1];
 
   document.getElementById("pizza1").innerHTML = `
-    <img src="${pizza1}.jpg" alt="${pizza1}">
-    ${pizza1}
+    <img src="${pizza1}.jpg" alt="${pizza1}" class="pizza-img">
+    <div>${pizza1}</div>
   `;
+
   document.getElementById("pizza2").innerHTML = `
-    <img src="${pizza2}.jpg" alt="${pizza2}">
-    ${pizza2}
+    <img src="${pizza2}.jpg" alt="${pizza2}" class="pizza-img">
+    <div>${pizza2}</div>
   `;
+
 
   document.getElementById("round-info").textContent =
     `Ronda de ${currentRound.length} - Elegí una`;
