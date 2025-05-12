@@ -23,7 +23,16 @@ function showMatchup() {
   if (currentRound.length === 1) {
     document.querySelector(".choices").style.display = "none";
     document.getElementById("round-info").textContent = "¡Ganadora!";
-    document.getElementById("winner").textContent = `🍕 ${currentRound[0]} 🍕`;
+    
+    // Mostrar el nombre del ganador
+    document.getElementById("winner-name").textContent = `🍕 ${currentRound[0]} 🍕`;
+    
+    // Mostrar la imagen del ganador
+    document.getElementById("winner-image").innerHTML = `
+      <img src="${currentRound[0]}.jpg" alt="${currentRound[0]}" class="pizza-img">
+    `;
+    
+    // Hacer visible el contenedor del ganador
     document.getElementById("winner").classList.remove("hidden");
     return;
   }
@@ -40,7 +49,6 @@ function showMatchup() {
     <img src="${pizza2}.jpg" alt="${pizza2}" class="pizza-img">
     <div>${pizza2}</div>
   `;
-
 
   document.getElementById("round-info").textContent =
     `Ronda de ${currentRound.length} - Elegí una`;
