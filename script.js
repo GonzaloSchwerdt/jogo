@@ -31,8 +31,15 @@ function showMatchup() {
   const pizza1 = currentRound[roundIndex];
   const pizza2 = currentRound[roundIndex + 1];
 
-  document.getElementById("pizza1").textContent = pizza1;
-  document.getElementById("pizza2").textContent = pizza2;
+  document.getElementById("pizza1").innerHTML = `
+    <img src="img/${pizza1}.jpg" alt="${pizza1}">
+    ${pizza1}
+  `;
+  document.getElementById("pizza2").innerHTML = `
+    <img src="img/${pizza2}.jpg" alt="${pizza2}">
+    ${pizza2}
+  `;
+
   document.getElementById("round-info").textContent =
     `Ronda de ${currentRound.length} - Elegí una`;
 
