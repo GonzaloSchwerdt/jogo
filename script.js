@@ -32,11 +32,11 @@ function showMatchup() {
   const pizza2 = currentRound[roundIndex + 1];
 
   document.getElementById("pizza1").innerHTML = `
-    <img src="img/${pizza1}.jpg" alt="${pizza1}">
+    <img src="${pizza1}.jpg" alt="${pizza1}">
     ${pizza1}
   `;
   document.getElementById("pizza2").innerHTML = `
-    <img src="img/${pizza2}.jpg" alt="${pizza2}">
+    <img src="${pizza2}.jpg" alt="${pizza2}">
     ${pizza2}
   `;
 
