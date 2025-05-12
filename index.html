@@ -3,39 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Memotest de Colores</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Elige tu Pizza Favorita 🍕</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Memotest de Colores</h1>
-    <div class="info">
-      <span id="timer">⏱️ 0s</span>
-      <span id="record">🏆 Récord: --</span>
-      <span id="level">🌈 Nivel: Pastel</span>
+    <h1>¿Cuál preferís?</h1>
+    <div id="round-info"></div>
+    <div class="choices">
+      <div class="pizza" id="pizza1" onclick="selectPizza(0)"></div>
+      <div class="pizza" id="pizza2" onclick="selectPizza(1)"></div>
     </div>
-    <div id="game-board"></div>
-
-    <div class="buttons">
-      <button id="reset-button">Reiniciar</button>
-      <button id="practice-button">Modo Práctica</button>
-    </div>
-
-    <p id="message"></p>
-    <div id="level-buttons" class="hidden">
-      <button id="replay-level">🔁 Repetir Nivel</button>
-      <button id="next-level">⏭️ Siguiente Nivel</button>
-    </div>
+    <div id="winner" class="hidden"></div>
   </div>
-
-  <!-- Confetti container -->
-  <div id="confetti-container"></div>
-
-  <!-- Sonidos -->
-  <audio id="flip-sound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
-  <audio id="match-sound" src="https://www.soundjay.com/button/sounds/button-4.mp3"></audio>
-  <audio id="win-sound" src="https://www.soundjay.com/human/sounds/applause-8.mp3"></audio>
-
   <script src="script.js"></script>
 </body>
 </html>
