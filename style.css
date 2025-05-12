@@ -71,6 +71,12 @@ h1 {
   color: #27ae60;
 }
 
+#winner-image img {
+  width: 100px; /* Ajusta el tamaño de la imagen del ganador */
+  height: auto;
+  margin-top: 10px;
+}
+
 .hidden {
   display: none;
 }
