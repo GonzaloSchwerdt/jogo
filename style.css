@@ -29,7 +29,8 @@ h1 {
 .choices {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px; /* ESPACIO ENTRE LAS OPCIONES */
   margin-top: 20px;
 }
 
