@@ -1,6 +1,6 @@
 const pizzas = [
   "Muzzarella", "Napolitana", "Fugazzeta", "Calabresa",
-  "CuatroQuesos", "Roquefort", "Rucula", "JamonMorrones"
+  "Cuatro Quesos", "Roquefort", "Rúcula", "Jamón y Morrones"
 ];
 
 let currentRound = [];
