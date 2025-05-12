@@ -1,64 +1,57 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff8f0;
-  text-align: center;
-  padding: 20px;
+const pizzas = [
+  "Muzzarella", "Napolitana", "Fugazzeta", "Calabresa",
+  "Cuatro Quesos", "Roquefort", "Rúcula", "Jamón y Morrones"
+];
+
+let currentRound = [];
+let nextRound = [];
+let roundIndex = 0;
+
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
 }
 
-h1 {
-  font-size: 1.8em;
-  color: #d35400;
+function startTournament() {
+  currentRound = shuffle([...pizzas]);
+  nextRound = [];
+  roundIndex = 0;
+  document.getElementById("winner").classList.add("hidden");
+  showMatchup();
 }
 
-.container {
-  max-width: 400px;
-  margin: auto;
-}
-
-.choices {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.pizza {
-  background-color: #f39c12;
-  flex: 1;
-  padding: 20px;
-  border-radius: 12px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.pizza:hover {
-  background-color: #e67e22;
-  transform: scale(1.05);
-}
-
-#round-info {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #555;
-}
-
-#winner {
-  margin-top: 30px;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #27ae60;
-}
-
-.hidden {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .choices {
-    flex-direction: column;
+function showMatchup() {
+  if (currentRound.length === 1) {
+    document.querySelector(".choices").style.display = "none";
+    document.getElementById("round-info").textContent = "¡Ganadora!";
+    document.getElementById("winner").textContent = `🍕 ${currentRound[0]} 🍕`;
+    document.getElementById("winner").classList.remove("hidden");
+    return;
   }
+
+  const pizza1 = currentRound[roundIndex];
+  const pizza2 = currentRound[roundIndex + 1];
+
+  document.getElementById("pizza1").textContent = pizza1;
+  document.getElementById("pizza2").textContent = pizza2;
+  document.getElementById("round-info").textContent =
+    `Ronda de ${currentRound.length} - Elegí una`;
+
+  document.querySelector(".choices").style.display = "flex";
 }
+
+function selectPizza(choice) {
+  const winner = currentRound[roundIndex + choice];
+  nextRound.push(winner);
+
+  roundIndex += 2;
+
+  if (roundIndex >= currentRound.length) {
+    currentRound = nextRound;
+    nextRound = [];
+    roundIndex = 0;
+  }
+
+  showMatchup();
+}
+
+startTournament();
