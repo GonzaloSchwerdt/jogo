@@ -27,7 +27,8 @@ h1 {
 }
 
 .choices {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between; /* Distribuye las opciones a la izquierda y derecha */
   margin-top: 20px;
 }
