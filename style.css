@@ -16,7 +16,8 @@ h1 {
 }
 
 .container {
-  max-width: 400px;
+  max-width: 900px;  /* o lo que prefieras */
+  width: 90%;
   margin: auto;
 }
 
