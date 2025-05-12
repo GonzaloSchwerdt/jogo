@@ -16,6 +16,7 @@ function startTournament() {
   nextRound = [];
   roundIndex = 0;
   document.getElementById("winner").classList.add("hidden");
+  document.querySelector(".choices").style.display = "flex";
   showMatchup();
 }
 
@@ -24,21 +25,18 @@ function showMatchup() {
     document.querySelector(".choices").style.display = "none";
     document.getElementById("round-info").textContent = "¡Ganadora!";
     
-    // Mostrar el nombre del ganador
     document.getElementById("winner-name").textContent = `🍕 ${currentRound[0]} 🍕`;
-    
-    // Mostrar la imagen del ganador
     document.getElementById("winner-image").innerHTML = `
       <img src="${currentRound[0]}.jpg" alt="${currentRound[0]}" class="pizza-img">
     `;
-    
-    // Hacer visible el contenedor del ganador
     document.getElementById("winner").classList.remove("hidden");
     return;
   }
 
   const pizza1 = currentRound[roundIndex];
   const pizza2 = currentRound[roundIndex + 1];
+
+  if (!pizza2) return; // Evita errores si hay número impar
 
   document.getElementById("pizza1").innerHTML = `
     <img src="${pizza1}.jpg" alt="${pizza1}" class="pizza-img">
@@ -52,8 +50,6 @@ function showMatchup() {
 
   document.getElementById("round-info").textContent =
     `Ronda de ${currentRound.length} - Elegí una`;
-
-  document.querySelector(".choices").style.display = "flex";
 }
 
 function selectPizza(choice) {
