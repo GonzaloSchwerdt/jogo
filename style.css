@@ -58,12 +58,14 @@ h1 {
   transform: scale(1.03);
 }
 
-.pizza img {
-  width: 60%;
-  height: auto;
-  border-radius: 10px;
+.pizza-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
   margin-bottom: 10px;
 }
+
 
 #winner {
   margin-top: 30px;
