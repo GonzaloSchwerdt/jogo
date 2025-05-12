@@ -39,7 +39,6 @@ h1 {
 .pizza {
   background-color: #f39c12;
   width: 45%;
-  height: 380px; /* Más espacio para la imagen */
   border-radius: 20px;
   color: white;
   font-size: 1.2em;
