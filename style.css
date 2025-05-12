@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 body {
-  margin-top: 50%;
   margin: 0;
   font-family: 'Fredoka', sans-serif;
   background-color: #fff8f0;
@@ -17,7 +16,7 @@ h1 {
 }
 
 .container {
-  max-width: 200px;
+  max-width: 400px;
   margin: auto;
 }
 
@@ -30,14 +29,14 @@ h1 {
 .choices {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Distribuye las opciones a la izquierda y derecha */
+  justify-content: space-between;
   margin-top: 20px;
 }
 
 .pizza {
   background-color: #f39c12;
-  flex: 1 1 85%;  /* Ocupa el 45% del ancho */
-  aspect-ratio: 1 / 1;  /* Para que las pizzas sean cuadradas */
+  flex: 1 1 45%;
+  aspect-ratio: 1 / 1;
   border-radius: 20px;
   color: white;
   font-size: 1.2em;
@@ -50,6 +49,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  margin: 0 5px;
 }
 
 .pizza:hover {
@@ -65,7 +65,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-
 #winner {
   margin-top: 30px;
   font-size: 1.6em;
@@ -74,7 +73,7 @@ h1 {
 }
 
 #winner-image img {
-  width: 100px; /* Ajusta el tamaño de la imagen del ganador */
+  width: 100px;
   height: auto;
   margin-top: 10px;
 }
