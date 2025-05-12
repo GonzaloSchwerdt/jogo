@@ -61,6 +61,7 @@ h1 {
 
 .pizza-img {
   object-fit: cover;
+  max-height: 900px;
   border-radius: 12px;
   margin-bottom: 10px;
 }
