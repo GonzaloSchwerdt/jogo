@@ -3,7 +3,7 @@
 /* Fondo con opacidad */
 body::before {
   content: "";
-  background-image: url('backgroundd.avif');
+  background-image: url('backgroundd.jpg');
   background-size: cover;
   background-position: center;
   position: fixed;
