@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
 
 body {
+  margin-top: 50%;
   margin: 0;
   font-family: 'Fredoka', sans-serif;
   background-color: #fff8f0;
@@ -16,7 +17,7 @@ h1 {
 }
 
 .container {
-  max-width: 480px;
+  max-width: 200px;
   margin: auto;
 }
 
@@ -35,7 +36,7 @@ h1 {
 
 .pizza {
   background-color: #f39c12;
-  flex: 1 1 45%;  /* Ocupa el 45% del ancho */
+  flex: 1 1 85%;  /* Ocupa el 45% del ancho */
   aspect-ratio: 1 / 1;  /* Para que las pizzas sean cuadradas */
   border-radius: 20px;
   color: white;
