@@ -29,15 +29,16 @@ h1 {
 .choices {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 15px;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .pizza {
-  background: linear-gradient(135deg, #f39c12, #e67e22);
-  flex: 1;
-  padding: 20px;
+  background-color: #f39c12;
+  flex: 1 1 45%;
+  aspect-ratio: 1 / 1;
   border-radius: 20px;
   color: white;
   font-size: 1.2em;
@@ -45,11 +46,23 @@ h1 {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .pizza:hover {
   background-color: #d35400;
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+.pizza img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 #winner {
@@ -65,11 +78,12 @@ h1 {
 
 @media (max-width: 480px) {
   .choices {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .pizza {
+    flex: 1 1 45%;
     font-size: 1.1em;
-    padding: 16px;
+    padding: 8px;
   }
 }
